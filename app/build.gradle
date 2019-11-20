@@ -57,6 +57,10 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
+    // Room
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+
     // OkHttp
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
@@ -70,8 +74,8 @@ dependencies {
     compileOnly "org.glassfish:javax.annotation:3.1.1"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxjava:2.1.15"
-    implementation "io.reactivex.rxjava2:rxandroid:2.0.2"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'

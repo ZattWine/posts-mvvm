@@ -1,5 +1,8 @@
 package com.example.mvvmposts.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 /**
  * Class which provides a model for post
  * @constructor Sets all properties of the post
@@ -8,8 +11,10 @@ package com.example.mvvmposts.model
  * @property title the title of the post
  * @property body the content of the post
  */
+@Entity
 data class Post(
     val userId: Int,
+    @field:PrimaryKey
     val id: Int,
     val title: String,
     val body: String

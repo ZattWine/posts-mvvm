@@ -1,6 +1,9 @@
 # posts-mvvm
 Getting and showing posts from [JsonPlaceHolder](http://jsonplaceholder.typicode.com/) api.
 
+# Architecture
+- [MVVM]()
+
 # Technology
 - [Android Architecture Component]()
 - [Dagger2]()
@@ -10,3 +13,5 @@ Getting and showing posts from [JsonPlaceHolder](http://jsonplaceholder.typicode
 
 # Reference
 - [MVVM with Kotlin — Android Architecture Components, Dagger 2, Retrofit and RxAndroid](https://proandroiddev.com/mvvm-with-kotlin-android-architecture-components-dagger-2-retrofit-and-rxandroid-1a4ebb38c699)
+
+# License
