@@ -1,7 +1,10 @@
 package com.example.mvvmposts.ui.post
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -10,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmposts.R
 import com.example.mvvmposts.databinding.ActivityPostListBinding
 import com.example.mvvmposts.di.ViewModelFactory
+import com.google.android.gms.oss.licenses.OssLicensesActivity
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.google.android.material.snackbar.Snackbar
 
 class PostListActivity : AppCompatActivity() {
@@ -42,5 +47,21 @@ class PostListActivity : AppCompatActivity() {
 
     private fun hideError() {
         errorSnackBar?.dismiss()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.menu_license -> {
+                val licenseIntent = Intent(this, OssLicensesMenuActivity::class.java)
+                startActivity(licenseIntent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
